@@ -20,7 +20,7 @@ git remote add origin https://github.com/lautaroMustang/avecino.git
 git pull
 git add --all
 git commit -m ""
-git push (force para pisar cosas)
+git push (force para pisar cosas) origin master
 git config user.email "lautarogonzalez@outlook.com"
 git config user.name "lautaroMustang"
 git checkout nombre -- me muevo entre ramas o commits
@@ -31,7 +31,7 @@ git amend , corregir el commit
 
 *-* JavaScript *-*
 
-debugger ----> para ir debagueando en browser! Muy Bueno 
+debugger ----> para ir debagueando en browser! Muy Bueno
 sacha.edad= prompt ("adjudica-resp-si-algo") || si-no-resp-guarda-est-predefinido
 
 
@@ -60,7 +60,7 @@ php artisan route:list
 php artisan serve --port 8080
 php artisan make:middleware
 composer require laraveles/spanish
-php artisan vendor:publish --tag=lang	
+php artisan vendor:publish --tag=lang
 
 *-*MYSQL*-*
 
@@ -85,11 +85,9 @@ show databases; muestra databases
 	/*
 	select movies.title, actors.first_name, actors.last_name from movies inner join 		actor_movie on movies.id = actor_movie.movie_id inner join actors on actors.id = 	actor_movie.actor_id;
 
-	identico a 
+	identico a
 	select movies.title, actors.first_name, actors.last_name from movies, actors, actor_movie 		where movies.id = actor_movie.movie_id and actors.id = actor_movie.actor_id;
 	*/
 	/*
 	select movies.title, genres.name, concat(actors.first_name,' ', actors.last_name) as name from movies inner join actor_movie on movies.id = actor_movie.movie_id inner join actors on actors.id = actor_movie.actor_id inner join genres on movies.genre_id = genres.id;
 	*/
-
-
