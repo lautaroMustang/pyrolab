@@ -31,7 +31,11 @@ git amend , corregir el commit
 
 *-* JavaScript *-*
 
+<<<<<<< HEAD
 debugger ----> para ir debagueando en browser! Muy Bueno
+=======
+debugger ----> para ir debagueando en browser! Muy Bueno
+>>>>>>> c194f469512e70cff54cb3aa9ed283a5721ad680
 sacha.edad= prompt ("adjudica-resp-si-algo") || si-no-resp-guarda-est-predefinido
 
 
@@ -60,7 +64,11 @@ php artisan route:list
 php artisan serve --port 8080
 php artisan make:middleware
 composer require laraveles/spanish
+<<<<<<< HEAD
 php artisan vendor:publish --tag=lang
+=======
+php artisan vendor:publish --tag=lang
+>>>>>>> c194f469512e70cff54cb3aa9ed283a5721ad680
 
 *-*MYSQL*-*
 
@@ -85,9 +93,18 @@ show databases; muestra databases
 	/*
 	select movies.title, actors.first_name, actors.last_name from movies inner join 		actor_movie on movies.id = actor_movie.movie_id inner join actors on actors.id = 	actor_movie.actor_id;
 
+<<<<<<< HEAD
 	identico a
+=======
+	identico a
+>>>>>>> c194f469512e70cff54cb3aa9ed283a5721ad680
 	select movies.title, actors.first_name, actors.last_name from movies, actors, actor_movie 		where movies.id = actor_movie.movie_id and actors.id = actor_movie.actor_id;
 	*/
 	/*
 	select movies.title, genres.name, concat(actors.first_name,' ', actors.last_name) as name from movies inner join actor_movie on movies.id = actor_movie.movie_id inner join actors on actors.id = actor_movie.actor_id inner join genres on movies.genre_id = genres.id;
 	*/
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c194f469512e70cff54cb3aa9ed283a5721ad680
