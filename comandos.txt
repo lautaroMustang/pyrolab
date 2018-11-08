@@ -1,0 +1,95 @@
+*-* G213 *-*
+sudo python main.py
+
+*-* TERMINAL *-*
+
+ctrl+shift+t nueva pestania terminal
+ctrl+c cierra sesion
+sudo chmod -R 777 bootstrap/cache/
+ctrl+r busqueda de comandos utilizados
+
+*-* XAMPP *-*
+
+sudo /opt/lampp/lampp start
+sudo /opt/lampp/manager-linux-x64.run
+
+*-* GIT *-*
+
+git init
+git remote add origin https://github.com/lautaroMustang/avecino.git
+git pull
+git add --all
+git commit -m ""
+git push (force para pisar cosas)
+git config user.email "lautarogonzalez@outlook.com"
+git config user.name "lautaroMustang"
+git checkout nombre -- me muevo entre ramas o commits
+git branch -- vemos las ramas
+git stash --guarda los cambios en una pila y los saca del add (stage)
+git stash pop, lo ultimo dela pila lo va a incorporar
+git amend , corregir el commit
+
+*-* JavaScript *-*
+
+debugger ----> para ir debagueando en browser! Muy Bueno 
+sacha.edad= prompt ("adjudica-resp-si-algo") || si-no-resp-guarda-est-predefinido
+
+
+*-* LARAVEL *-*
+
+composer create-project laravel/laravel ejemploDeNombreDeProyecto
+composer install
+php artisan serve
+cp .env.example .env
+http://localhost:8000
+php artisan key:generate
+php artisan make:controller SaludoControlador - r  This command will generate a controller at app/Http/Controllers/PhotoController.php. The controller will contain a method for each of the available resource operations.
+php artisan make:controller Saludos/SaludoControlador  --crea en una carpeta
+php artisan make:controller Saludos -m -r (crea el controlador con el modelo y los recursos)
+php artisan make:model NombreModelo
+php artisan m:mod NombreModelo
+php artisan tinker //para abrir consola tipo php para probar codigo php
+sudo apt-get install php7.2-mysql // driver para conectar phpartisan a mysql
+php artisan migrate
+appserviceprovider (VER ARCHIVO APARTE)
+php artisan db:seed
+php artisan make:migration CreateProductsTable --table=nombretabla (--.. genera el up y down)
+composer require doctrine/dbal
+composer dump-autoload (actualiza el autoload)
+php artisan route:list
+php artisan serve --port 8080
+php artisan make:middleware
+composer require laraveles/spanish
+php artisan vendor:publish --tag=lang	
+
+*-*MYSQL*-*
+
+/opt/lampp/bin/mysql -u root
+/opt/lampp/bin/mysql -u root < /home/lautaro/Escritorio/movies-db.sql  // importar base
+show databases; muestra databases
+
+	/*--SELECT columna1, columna2, columna3, ...
+	FROM tabla
+	[WHERE condicion1, condicion2, condicion3, ...]
+	[ORDER BY columna1 [ASC/DESC]
+	, columna2 [ASC/DESC], ...]
+	LIMIT [inicio_registro,] cantidad_registros*/
+
+
+	/*
+	SELECT campos
+	FROM tablaA t1, tablaB t2, [... tablaC t3, tablen tn]
+	WHERE t1.campo = t2.campo [... and t3.campo=tn.campo]
+	*/
+
+	/*
+	select movies.title, actors.first_name, actors.last_name from movies inner join 		actor_movie on movies.id = actor_movie.movie_id inner join actors on actors.id = 	actor_movie.actor_id;
+
+	identico a 
+	select movies.title, actors.first_name, actors.last_name from movies, actors, actor_movie 		where movies.id = actor_movie.movie_id and actors.id = actor_movie.actor_id;
+	*/
+	/*
+	select movies.title, genres.name, concat(actors.first_name,' ', actors.last_name) as name from movies inner join actor_movie on movies.id = actor_movie.movie_id inner join actors on actors.id = actor_movie.actor_id inner join genres on movies.genre_id = genres.id;
+	*/
+
+
