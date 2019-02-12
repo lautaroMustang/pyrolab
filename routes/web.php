@@ -15,3 +15,8 @@
 //     return view('welcome');
 // });
 Route::get('/', 'HomeController@index')->name('index');
+
+// --- Items --- ///
+
+Route::get('/items', 'ItemController@index');
+Route::get('/items/add', 'ItemController@create');
