@@ -20,3 +20,4 @@ Route::get('/', 'HomeController@index')->name('index');
 
 Route::get('/items', 'ItemController@index');
 Route::get('/items/add', 'ItemController@create');
+Route::post('/items/add', 'ItemController@store');

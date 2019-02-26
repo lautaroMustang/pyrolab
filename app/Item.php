@@ -8,8 +8,8 @@ class Item extends Model
 {
     protected $fillable = ['code','name'];
 
-    public function ($value='')
+    public function item_images()
     {
-      // code...
+      return $this->hasMany('\App\Item_image','item_id','id');
     }
 }

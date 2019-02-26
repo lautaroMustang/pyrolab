@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Item;
 use Illuminate\Http\Request;
-use Validator;
 
-class ItemController extends Controller
+class Item_imageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +13,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return view('item.index');
+        //
     }
 
     /**
@@ -25,16 +23,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-      // $department = Department::find($department_id);
-      // $state = State::find($department->state_id);
-      // $country = Country::find($state->country_id);
-      //
-      // $variables = [
-      //   "country" => $country,
-      //   "state" => $state,
-      //   "department" => $department,
-      // ];
-      return view('item.create');
+        //
     }
 
     /**
@@ -45,23 +34,7 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        $input=$request->except('_token');
-        $rules=[
-          "code"=>"required|unique:items",
-          "name"=>"required",
-        ];
-        $messages=[
-          "required"=>"Ingresar el :attribute es obligatorio",
-          "unique"=>"El :attribute elegido ya está en uso"
-        ];
-        $request->validate($rules, $messages);
-        // var_dump($request);
-        // exit;
-        $item=\App\Item::create([
-          'code'=>$request->input('code'),
-          'name'=>$request->input('name'),
-        ]);
-        return redirect('/items/');
+        //
     }
 
     /**

@@ -17,6 +17,19 @@
           </ul>
       </div>
     @endif
+
+    <label for="name">Nombre</label>
+    <input type="text" name="name" id="name" value="{{old('name')}}">
+    @if ($errors->has('name'))
+      <div class="alert alert-danger">
+          <ul>
+            @foreach ($errors->get('name') as $error)
+              <li>{{$error}}</li>
+            @endforeach
+          </ul>
+      </div>
+    @endif
+
     <button type="submit" name="button">Enviar</button>
   </form>
 @endsection
