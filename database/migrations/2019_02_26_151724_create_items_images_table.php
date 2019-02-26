@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItemsTable extends Migration
+class CreateItemsImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateItemsTable extends Migration
      */
     public function up()
     {
-      Schema::create('items', function (Blueprint $table) {
+        Schema::create('images_items', function (Blueprint $table) {
           $table->mediumIncrements('id');
-          $table->string('code',100);
-          $table->string('name',100);
+          $table->mediumInteger('item_id')->unsigned();
+          $table->tinyInteger('order');
+          $table->string('fotoPath',100);
           $table->timestamps();
-      });
+        });
     }
 
     /**
@@ -28,6 +29,8 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::table('images_items', function (Blueprint $table) {
+            //
+        });
     }
 }
