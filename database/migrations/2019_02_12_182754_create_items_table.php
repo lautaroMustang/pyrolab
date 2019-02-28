@@ -17,6 +17,10 @@ class CreateItemsTable extends Migration
           $table->mediumIncrements('id');
           $table->string('code',100);
           $table->string('name',100);
+          $table->smallInteger('qtyProvPresentation');
+          $table->double('providerPrice', 11, 4)->unsigned();
+          $table->double('standardPrice', 11, 4)->unsigned();
+          $table->tinyInteger('status')->unsigned();
           $table->timestamps();
       });
     }

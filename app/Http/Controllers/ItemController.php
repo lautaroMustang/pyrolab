@@ -50,10 +50,14 @@ class ItemController extends Controller
         $input=$request->except('_token');
         $rules=[
           "code"=>"required|unique:items",
+          "qtyProvPresentation"=>"required|integer",
+          "providerPrice"=>"required|numeric",
+          "standardPrice"=>"required|numeric",
           "name"=>"required",
         ];
         $messages=[
           "required"=>"Ingresar el :attribute es obligatorio",
+          "integer"=>"El :attribute debe ser un número",
           "unique"=>"El :attribute elegido ya está en uso"
         ];
         $request->validate($rules, $messages);
@@ -62,6 +66,10 @@ class ItemController extends Controller
         $item=\App\Item::create([
           'code'=>$request->input('code'),
           'name'=>$request->input('name'),
+          'qtyProvPresentation'=>$request->input('qtyProvPresentation'),
+          'providerPrice'=>$request->input('providerPrice'),
+          'standardPrice'=>$request->input('standardPrice'),
+          'status'=>1,
         ]);
         return redirect('/items/');
     }

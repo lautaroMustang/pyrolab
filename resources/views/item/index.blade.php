@@ -5,7 +5,10 @@
 @section('content')
   @foreach ($items as $item)
     <br>
-    Code: {{$item->code}} Name: {{$item->name}}
+    Código: {{$item->code}} Nombre: {{$item->name}}
+    Presentacion Proveedor: {{$item->qtyProvPresentation}}
+    Precio Proveedor: {{$item->providerPrice}}
+    Precio lista: {{$item->standardPrice}}
     <br>
   @endforeach
   {{$items->links()}}
